@@ -1,0 +1,25 @@
+{
+  "manifestVersion": 1,
+  "name": "imgen",
+  "displayName": "Imgen 图片适配",
+  "publisher": "blackcatcmx",
+  "version": "0.1.0",
+  "description": "将图片编辑的 multipart 上传转换为 CPR Images JSON 请求",
+  "license": "Apache-2.0",
+  "engines": { "codex-proxy-rs": ">=3.17.0" },
+  "main": "bin/plugin",
+  "runtime": "trustedProcess",
+  "contributes": {
+    "middleware": {
+      "stages": ["request"],
+      "inputFormats": ["openai"],
+      "outputFormats": ["openai"]
+    }
+  },
+  "permissions": ["requests"],
+  "configurationSchema": {
+    "type": "object",
+    "properties": {},
+    "additionalProperties": false
+  }
+}
