@@ -28,7 +28,7 @@ checksum = "7f8f80099a98041a3d1622845c271458a2d73e688351bf3cb999266764b81d48"
 
 [[package]]
 name = "cpr-plugin-imgen"
-version = "0.1.0"
+version = "0.2.0"
 dependencies = [
  "base64",
  "gateway-plugin-sdk",
@@ -83,7 +83,7 @@ dependencies = [
 [[package]]
 name = "gateway-plugin-sdk"
 version = "0.1.0"
-source = "git+https://github.com/zyycn/codex-proxy-rs.git?rev=3915aa259bb558bb285784b57ba6b3b43abefd93#3915aa259bb558bb285784b57ba6b3b43abefd93"
+source = "git+https://github.com/zyycn/codex-proxy-rs.git?rev=e30aad475560b94db2d999e2251d180e45d52671#e30aad475560b94db2d999e2251d180e45d52671"
 dependencies = [
  "semver",
  "serde",
