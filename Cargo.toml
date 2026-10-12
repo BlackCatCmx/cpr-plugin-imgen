@@ -1,6 +1,6 @@
 [package]
 name = "cpr-plugin-imgen"
-version = "0.2.0"
+version = "0.2.1"
 edition = "2024"
 rust-version = "1.97"
 license = "Apache-2.0"
@@ -8,7 +8,7 @@ publish = false
 
 [dependencies]
 base64 = "0.23.0"
-gateway-plugin-sdk = { git = "https://github.com/zyycn/codex-proxy-rs.git", rev = "e30aad475560b94db2d999e2251d180e45d52671", features = ["io"] }
+gateway-plugin-sdk = { git = "https://github.com/zyycn/codex-proxy-rs.git", rev = "eea16f5275cc20c8893ee9b568301152f329089d", features = ["io"] }
 multer = { version = "3.1.0", features = ["tokio-io"] }
 serde_json = "1.0.150"
 tokio = { version = "1.52.3", default-features = false, features = ["io-std", "macros", "rt", "sync", "time"] }
