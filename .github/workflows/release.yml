@@ -15,12 +15,12 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: zyycn/codex-proxy-rs
-          ref: eea16f5275cc20c8893ee9b568301152f329089d
+          ref: 16d8a3f87309d9346a5f204673390fe20478b40e
           path: temp/codex-proxy-rs
-      - name: Install Rust 1.97
+      - name: Install Rust 1.99.1
         run: |
-          rustup toolchain install 1.97.0 --profile minimal --component rustfmt --component clippy
-          rustup default 1.97.0
+          rustup toolchain install 1.99.1 --profile minimal --component rustfmt --component clippy
+          rustup default 1.99.1
       - name: Check version
         run: |
           python - <<'PY'
@@ -49,5 +49,5 @@ jobs:
         run: |
           gh release create "$GITHUB_REF_NAME" dist/*.tar.gz dist/*.sha256 \
             --verify-tag --title "$GITHUB_REF_NAME" \
-            --notes 'Imgen 图片编辑请求适配；Linux amd64，使用 middleware v4，兼容 CPR 3.24.1 及清单声明的版本范围。' \
+            --notes 'Imgen 图片编辑请求适配；Linux amd64，使用 RPC v4、middleware v5，兼容 CPR 3.29.3 及清单声明的版本范围。CPR 3.29.0 起已原生支持 multipart 图片编辑，通常无需启用此插件。' \
             --latest
